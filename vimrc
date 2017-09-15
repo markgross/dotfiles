@@ -4,6 +4,8 @@ execute pathogen#infect()
 :filetype on
 :filetype plugin on
 
+colorscheme fruity
+
 set nowrap
 set hlsearch
 set number
@@ -11,8 +13,8 @@ set history=50		" keep 50 lines of command line history
 
 set textwidth=79
 set colorcolumn=+1
+"hi ColorColumn ctermbg=lightgray
 hi ColorColumn ctermbg=lightgreen
-
 
 "messy file options
 set nobackup		" do not keep a backup file, use versions instead
@@ -35,8 +37,6 @@ set synmaxcol=512
 "have yanked content go into the x-windows clibboard buffer
 set clipboard=unnamed
 
-colorscheme fruity
-
 "set up for nice man page viewing.
 let $PAGER='more'
 
@@ -46,7 +46,6 @@ let $PAGER='more'
 "autocmd FileType python let g:pep8_map='<F5>'
 "Generate tags with: ctags -R -f ~/.vim/tags/python2.7.ctags /usr/lib/python2.7/
 autocmd FileType python set tags+=/home/mgross/.vim/tags/python2.7.ctags
-
 
 " setup for linux kernel:
 :autocmd FileType c,cpp set tabstop=8 shiftwidth=8 noexpandtab smarttab autoindent
@@ -62,4 +61,3 @@ map <c-h> <c-w>h
 "set showbreak=↪
 "set title
 "set linebreak
-
