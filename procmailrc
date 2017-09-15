@@ -1,0 +1,57 @@
+# Environment variable assignments
+PATH=/bin:/usr/bin:/usr/local/bin 
+VERBOSE=off                   # Turn on for verbose log
+MAILDIR=$HOME/Maildir            # Where Procmail recipes deliver
+LOGFILE=$HOME/Procmail.log    # Keep a log for troubleshooting.
+
+DEFAULT=$MAILDIR/mbox
+
+# Regenerate "From" lines to make sure they are valid
+:0 fhw
+| formail -I "From " -a "From "
+
+
+# to ME
+:0:
+* ^TOmgross
+IN.MarkGross/
+
+:0:
+* ^From.*sys_oak
+IN.sys_oak/
+
+:0:
+* ^From.*kernel-build-test-request
+IN.sys_oak/
+
+:0:
+* ^TO1and
+IN.1and/
+
+:0:
+* ^Sender: linux-edac-owner@vger.kernel.org
+IN.linux-edac/
+
+:0:
+* ^List-Id: *kernel.eclists.intel.com
+IN.production_kernel/
+
+
+###########
+# linux-kernel #
+###########
+
+
+:0:
+* ^Received: from linux
+IN.Intel/
+
+
+#####################################
+# Last rule:  Put mail into mailbox #
+#####################################
+:0:
+$DEFAULT/
+
+
+
