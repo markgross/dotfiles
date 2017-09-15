@@ -10,6 +10,7 @@ filetype plugin indent on
 colorscheme fruity
 
 set nowrap
+set incsearch
 set hlsearch
 set number
 set history=50		" keep 50 lines of command line history
@@ -26,12 +27,12 @@ set noswapfile
 
 "spelling
 setlocal spell spelllang=en_us
-map <F3> <Esc>]s
-map <F4> <Esc>z=
+map <F3> <Esc>]s  " find next misspelled
+map <F4> <Esc>z=  " show list of correctly spelled possibilities
 
 imap <F3> <Esc>]s
 imap <F4> <Esc>z=
-set nospell
+set nospell  " hilights of misspelled words got on my nevers.  Turn it on when I need it using :set spell.
 
 
 " Don't try to highlight lines longer than 512 characters.
@@ -40,7 +41,7 @@ set synmaxcol=512
 "have yanked content go into the x-windows clibboard buffer
 set clipboard=unnamed
 
-"set up for nice man page viewing.
+"set up for nice man page viewing when using "K".
 let $PAGER='more'
 
 " setup for python:
