@@ -7,6 +7,8 @@ execute pathogen#infect()
 filetype plugin on
 filetype plugin indent on
 
+set term=screen-256color
+"colorscheme inkpot
 colorscheme fruity
 
 set nowrap
@@ -14,11 +16,14 @@ set incsearch
 set hlsearch
 set number
 set history=50		" keep 50 lines of command line history
+" set mouse=a
 
 set textwidth=79
 set colorcolumn=+1
-"hi ColorColumn ctermbg=lightgray
-hi ColorColumn ctermbg=lightgreen
+hi ColorColumn ctermbg=lightgray
+"hi ColorColumn ctermbg=lightgreen
+"set background="light"
+set background="dark"
 
 "messy file options
 set nobackup		" do not keep a backup file, use versions instead
