@@ -3,13 +3,20 @@
 set nocompatible
 
 execute pathogen#infect()
+"curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+" some good plugin's:
+" https://github.com/scrooloose/nerdtree.git 
+" https://github.com/Xuyuanp/nerdtree-git-plugin.git
+" https://github.com/nvie/vim-flake8.git
+
 "filetype on
 filetype plugin on
 filetype plugin indent on
 
-set term=screen-256color
-"colorscheme inkpot
-colorscheme fruity
+"set term=screen-256color
+colorscheme inkpot   "http://github.com/ciaranm/inkpot/
+"colorscheme fruity  "https://github.com/mitsuhiko/fruity-vim-colorscheme.git
 "colorscheme desert
 
 set nowrap
