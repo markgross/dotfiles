@@ -14,7 +14,7 @@ execute pathogen#infect()
 filetype plugin on
 filetype plugin indent on
 
-"set term=screen-256color
+"set term=screen-256color " uncomment this if backgound looks goofy
 colorscheme inkpot   "http://github.com/ciaranm/inkpot/
 "colorscheme fruity  "https://github.com/mitsuhiko/fruity-vim-colorscheme.git
 "colorscheme desert
